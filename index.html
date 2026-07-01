@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>John Christian De Leon — Executive Assistant &amp; Operations Support</title>
+<meta name="description" content="John Christian De Leon — Executive Assistant with 4+ years running calendars, inboxes, travel, and daily operations for founders and CEOs across the US, Australia, and the Philippines." />
+<meta name="author" content="John Christian De Leon" />
+<meta name="theme-color" content="#DEE1E7" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="John Christian De Leon — Executive Assistant" />
+<meta property="og:description" content="The operations layer behind busy founders. Calendars, inboxes, travel, and daily operations — handled. 4+ years remote, US · AU · PH." />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23070B14'/%3E%3Crect x='3.5' y='3.5' width='57' height='57' rx='11.5' fill='none' stroke='%234FE3D0' stroke-width='1.5' opacity='.5'/%3E%3Ctext x='32' y='43' font-family='Space Grotesk,Arial' font-size='30' font-weight='700' fill='%234FE3D0' text-anchor='middle'%3EJC%3C/text%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;450;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+/* ============ TOKENS ============ */
+:root{
+  --bg:#DEE1E7; --bg-2:#E8EBEF; --surface:#F3F4F7; --surface-2:#FAFBFC;
+  --line:#C6CAD3; --line-2:#B1B7C2;
+  --ink:#1C2532; --muted:#586475; --faint:#8A93A2;
+  --teal:#0F9E90; --teal-dim:#0C7F74; --teal-deep:#0E3A38;
+  --amber:#B5760F; --indigo:#4E5FD0;
+  --r:16px; --r-sm:11px; --r-lg:22px;
+  --mx:clamp(20px,5vw,88px);
+  --maxw:1180px;
+  --sans:"Inter",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+  --disp:"Space Grotesk",var(--sans);
+  --mono:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+  --ease:cubic-bezier(.22,.61,.36,1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  background:var(--bg); color:var(--ink); font-family:var(--sans);
+  font-size:16px; line-height:1.6; letter-spacing:.1px;
+  overflow-x:hidden; -webkit-font-smoothing:antialiased;
+  background-image:
+    radial-gradient(1000px 640px at 50% -12%, #F4F5F8, transparent 70%),
+    radial-gradient(720px 460px at 86% -4%, rgba(15,158,144,.06), transparent 60%),
+    radial-gradient(680px 520px at -8% 16%, rgba(78,95,208,.05), transparent 60%);
+  background-attachment:fixed;
+}
+::selection{background:rgba(15,158,144,.22); color:#062b27}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+h1,h2,h3,h4{font-family:var(--disp);font-weight:600;line-height:1.08;letter-spacing:-.02em}
+
+/* dotted control-room texture */
+body::before{
+  content:""; position:fixed; inset:0; z-index:0; pointer-events:none;
+  background-image:radial-gradient(rgba(28,37,50,.05) 1px, transparent 1px);
+  background-size:26px 26px; mask-image:linear-gradient(to bottom, #000, transparent 88%);
+  opacity:.6;
+}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 var(--mx)}
+.mono{font-family:var(--mono)}
+.accent{color:var(--teal)}
+
+/* ============ NAV ============ */
+header.nav{
+  position:sticky; top:0; z-index:60;
+  backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px);
+  background:linear-gradient(180deg, rgba(246,247,249,.86), rgba(246,247,249,.55));
+  border-bottom:1px solid rgba(180,186,196,.8);
+}
+.nav-in{display:flex;align-items:center;justify-content:space-between;height:66px;max-width:var(--maxw);margin:0 auto;padding:0 var(--mx)}
+.brand{display:flex;align-items:center;gap:11px;font-family:var(--disp);font-weight:600;letter-spacing:-.01em}
+.brand .mono-badge{
+  width:34px;height:34px;border-radius:9px;display:grid;place-items:center;
+  border:1px solid var(--line-2);background:var(--surface);color:var(--teal);
+  font-family:var(--disp);font-weight:700;font-size:14px;
+  box-shadow:0 0 0 1px rgba(79,227,208,.06), inset 0 0 14px rgba(79,227,208,.07);
+}
+.brand b{font-size:15px}
+.brand span{color:var(--faint);font-family:var(--mono);font-size:11px;font-weight:400;display:block;margin-top:-2px;letter-spacing:.02em}
+.nav-links{display:flex;align-items:center;gap:30px}
+.nav-links a{font-size:14px;color:var(--muted);position:relative;transition:color .2s}
+.nav-links a::after{content:"";position:absolute;left:0;bottom:-6px;height:1.5px;width:0;background:var(--teal);transition:width .28s var(--ease)}
+.nav-links a:hover{color:var(--ink)} .nav-links a:hover::after,.nav-links a.on::after{width:100%}
+.nav-cta{
+  font-family:var(--sans);font-weight:500;font-size:13.5px;color:var(--bg);
+  background:var(--teal); padding:9px 16px;border-radius:9px;letter-spacing:.2px;
+  transition:transform .18s var(--ease),box-shadow .2s; box-shadow:0 6px 22px rgba(79,227,208,.22);
+}
+.nav-cta:hover{transform:translateY(-2px);box-shadow:0 10px 28px rgba(79,227,208,.34)}
+.burger{display:none;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer;padding:8px}
+.burger span{width:22px;height:2px;background:var(--ink);border-radius:2px;transition:.25s}
+.burger.x span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.burger.x span:nth-child(2){opacity:0}
+.burger.x span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+/* ============ HERO ============ */
+.hero{position:relative;z-index:1;padding:clamp(48px,7vw,92px) 0 clamp(40px,6vw,66px)}
+.hero-grid{display:grid;grid-template-columns:1.15fr minmax(300px,380px);gap:clamp(28px,4vw,56px);align-items:center}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:9px;font-family:var(--mono);font-size:11.5px;
+  color:var(--muted);letter-spacing:.14em;text-transform:uppercase;
+  border:1px solid var(--line);background:rgba(255,255,255,.6);padding:7px 13px;border-radius:100px;
+}
+.pulse{width:8px;height:8px;border-radius:50%;background:var(--teal);box-shadow:0 0 0 0 rgba(79,227,208,.6);animation:pulse 2.4s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(79,227,208,.55)}70%{box-shadow:0 0 0 9px rgba(79,227,208,0)}100%{box-shadow:0 0 0 0 rgba(79,227,208,0)}}
+.hero h1{font-size:clamp(2.4rem,4.3vw,3.5rem);font-weight:600;margin:22px 0 0;letter-spacing:-.03em;line-height:1.06}
+.hero-copy{min-width:0}
+.hero h1 .em{color:var(--teal);position:relative}
+.hero-sub{color:var(--muted);font-size:clamp(1rem,1.5vw,1.14rem);max-width:37ch;margin-top:20px;line-height:1.62}
+.hero-sub b{color:var(--ink);font-weight:600}
+.role-line{margin-top:16px;font-family:var(--mono);font-size:12.5px;color:var(--faint);letter-spacing:.02em}
+.role-line i{color:var(--teal-dim);font-style:normal}
+.cta-row{display:flex;flex-wrap:wrap;gap:13px;margin-top:30px}
+.btn{
+  display:inline-flex;align-items:center;gap:9px;font-weight:500;font-size:14.5px;
+  padding:13px 20px;border-radius:11px;cursor:pointer;transition:transform .18s var(--ease),box-shadow .22s,border-color .2s,background .2s;
+}
+.btn-primary{background:var(--teal);color:#fff;box-shadow:0 8px 26px rgba(79,227,208,.24)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 34px rgba(79,227,208,.36)}
+.btn-ghost{border:1px solid var(--line-2);color:var(--ink);background:rgba(255,255,255,.5)}
+.btn-ghost:hover{border-color:var(--teal-dim);transform:translateY(-2px);background:rgba(15,158,144,.10)}
+.btn svg{width:17px;height:17px}
+
+/* timezone coverage */
+.tz{display:flex;gap:10px;margin-top:34px;flex-wrap:wrap}
+.tz-card{border:1px solid var(--line);background:rgba(255,255,255,.55);border-radius:12px;padding:11px 14px;min-width:104px}
+.tz-card .tz-loc{font-family:var(--mono);font-size:10.5px;color:var(--faint);letter-spacing:.08em;text-transform:uppercase;display:flex;align-items:center;gap:6px}
+.tz-card .tz-time{font-family:var(--disp);font-weight:600;font-size:1.12rem;margin-top:5px;color:var(--ink);font-variant-numeric:tabular-nums}
+.tz-card .dot{width:6px;height:6px;border-radius:50%;background:var(--teal)}
+
+/* hero photo */
+.hero-photo{position:relative;justify-self:center;width:min(100%,384px)}
+.photo-stage{position:relative;width:100%}
+.photo-stage::before{
+  content:"";position:absolute;inset:4% 6% -1% 6%;border-radius:50% 50% 44% 44%/60% 60% 40% 40%;
+  background:radial-gradient(closest-side, rgba(79,227,208,.34), rgba(124,147,255,.14) 62%, transparent 78%);
+  filter:blur(6px);z-index:0;
+}
+.photo-stage img{
+  position:relative;z-index:1;width:100%;height:auto;display:block;object-fit:contain;
+  -webkit-mask-image:linear-gradient(to bottom,#000 79%,transparent 99%);
+  mask-image:linear-gradient(to bottom,#000 79%,transparent 99%);
+  filter:drop-shadow(0 24px 44px rgba(0,0,0,.55));
+}
+.scan{position:absolute;left:8%;right:8%;top:8%;height:2px;z-index:2;border-radius:2px;
+  background:linear-gradient(90deg,transparent,rgba(79,227,208,.75),transparent);opacity:.55;animation:scan 6.5s var(--ease) infinite}
+@keyframes scan{0%,100%{transform:translateY(0);opacity:0}12%{opacity:.6}50%{transform:translateY(340%);opacity:.5}88%{opacity:.55}}
+.op-chip{
+  position:absolute;z-index:3;font-family:var(--mono);font-size:11px;letter-spacing:.04em;
+  border:1px solid var(--line-2);background:rgba(255,255,255,.86);backdrop-filter:blur(6px);
+  border-radius:10px;padding:8px 11px;color:var(--muted);display:flex;align-items:center;gap:8px;
+  box-shadow:0 10px 30px rgba(0,0,0,.4);
+}
+.op-chip .pulse{width:7px;height:7px}
+.op-chip.top{top:6%;left:-6%}
+.op-chip.bot{bottom:12%;right:-6%;color:var(--ink)}
+.op-chip.bot b{color:var(--teal);font-weight:600}
+.op-chip .k{color:var(--faint)}
+
+/* ============ STATUS STRIP ============ */
+.strip{position:relative;z-index:1;border-block:1px solid var(--line);background:rgba(255,255,255,.5);margin-top:8px}
+.strip-in{display:grid;grid-template-columns:repeat(4,1fr);max-width:var(--maxw);margin:0 auto;padding:0 var(--mx)}
+.stat{padding:26px 8px;border-right:1px solid var(--line);text-align:left}
+.stat:last-child{border-right:0}
+.stat .n{font-family:var(--disp);font-weight:600;font-size:clamp(1.7rem,3vw,2.3rem);letter-spacing:-.03em;line-height:1}
+.stat .n em{color:var(--teal);font-style:normal;font-size:.6em;vertical-align:super}
+.stat .l{font-family:var(--mono);font-size:11px;color:var(--muted);letter-spacing:.06em;text-transform:uppercase;margin-top:9px}
+
+/* ============ SECTION SHELL ============ */
+section{position:relative;z-index:1;padding:clamp(64px,9vw,116px) 0}
+.sec-head{max-width:660px;margin-bottom:clamp(38px,5vw,58px)}
+.sec-tag{font-family:var(--mono);font-size:11.5px;color:var(--teal-dim);letter-spacing:.16em;text-transform:uppercase;display:flex;align-items:center;gap:12px}
+.sec-tag::before{content:"";width:26px;height:1px;background:var(--teal-dim);opacity:.7}
+.sec-title{font-size:clamp(1.9rem,3.8vw,2.85rem);margin-top:18px;letter-spacing:-.03em;font-weight:600}
+.sec-desc{color:var(--muted);margin-top:16px;font-size:1.05rem;max-width:54ch}
+
+/* ============ ABOUT ============ */
+.about-grid{display:grid;grid-template-columns:1.4fr .9fr;gap:clamp(30px,4vw,60px);align-items:start}
+.about-body p{color:#37424F;font-size:1.12rem;line-height:1.72;margin-bottom:18px}
+.about-body p b{color:var(--ink)}
+.about-body p:last-child{margin-bottom:0}
+.about-side{border:1px solid var(--line);background:linear-gradient(180deg,var(--surface),rgba(255,255,255,.4));border-radius:var(--r);padding:26px}
+.about-side h4{font-size:1rem;font-family:var(--mono);font-weight:500;color:var(--muted);letter-spacing:.06em;text-transform:uppercase;margin-bottom:18px}
+.trait{display:flex;gap:13px;padding:13px 0;border-top:1px solid var(--line)}
+.trait:first-of-type{border-top:0;padding-top:0}
+.trait svg{width:19px;height:19px;color:var(--teal);flex-shrink:0;margin-top:2px}
+.trait div b{display:block;font-size:14.5px;color:var(--ink);font-weight:600}
+.trait div span{font-size:13px;color:var(--muted)}
+
+/* ============ CAPABILITIES ============ */
+.cap-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.cap{
+  border:1px solid var(--line);border-radius:var(--r);padding:28px;background:linear-gradient(180deg,var(--surface),rgba(255,255,255,.35));
+  position:relative;overflow:hidden;transition:border-color .3s,transform .3s var(--ease),background .3s;
+}
+.cap::after{content:"";position:absolute;inset:0;border-radius:var(--r);pointer-events:none;
+  background:radial-gradient(340px 160px at 100% 0,rgba(79,227,208,.10),transparent 62%);opacity:0;transition:opacity .35s}
+.cap:hover{transform:translateY(-4px);border-color:var(--line-2)}
+.cap:hover::after{opacity:1}
+.cap-ico{width:46px;height:46px;border-radius:12px;display:grid;place-items:center;border:1px solid var(--line-2);background:var(--bg-2);color:var(--teal);margin-bottom:18px}
+.cap-ico svg{width:22px;height:22px}
+.cap-num{position:absolute;top:24px;right:26px;font-family:var(--mono);font-size:12px;color:var(--faint)}
+.cap h3{font-size:1.28rem;font-weight:600;letter-spacing:-.02em}
+.cap ul{list-style:none;margin-top:16px}
+.cap li{display:flex;gap:10px;align-items:flex-start;font-size:14.5px;color:var(--muted);padding:7px 0}
+.cap li::before{content:"";width:5px;height:5px;border-radius:50%;background:var(--teal-dim);margin-top:9px;flex-shrink:0}
+
+/* ============ EXPERIENCE ============ */
+.tl{position:relative;margin-left:6px}
+.tl::before{content:"";position:absolute;left:7px;top:6px;bottom:6px;width:1.5px;background:linear-gradient(var(--line-2),var(--line),transparent)}
+.job{position:relative;padding:0 0 40px 40px}
+.job:last-child{padding-bottom:0}
+.job .node{position:absolute;left:0;top:5px;width:16px;height:16px;border-radius:50%;background:var(--bg);border:2px solid var(--teal-dim);display:grid;place-items:center}
+.job .node::after{content:"";width:5px;height:5px;border-radius:50%;background:var(--teal)}
+.job.cur .node{border-color:var(--teal);box-shadow:0 0 0 5px rgba(79,227,208,.10)}
+.job-top{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 14px;margin-bottom:5px}
+.job h3{font-size:1.24rem;font-weight:600;letter-spacing:-.02em}
+.job .period{font-family:var(--mono);font-size:11.5px;color:var(--muted);border:1px solid var(--line);border-radius:100px;padding:4px 11px;display:inline-flex;align-items:center;gap:6px}
+.job.cur .period{color:var(--teal);border-color:rgba(79,227,208,.3)}
+.job .period .dot{width:6px;height:6px;border-radius:50%;background:var(--teal)}
+.job .org{color:var(--teal-dim);font-size:14px;font-family:var(--mono);margin-bottom:12px}
+.job ul{list-style:none}
+.job li{position:relative;padding:5px 0 5px 18px;color:var(--muted);font-size:14.5px}
+.job li::before{content:"→";position:absolute;left:0;color:var(--faint);font-family:var(--mono)}
+.edu{margin-top:8px;border:1px solid var(--line);border-radius:var(--r);padding:22px 24px;background:var(--surface);display:flex;gap:16px;align-items:center}
+.edu svg{width:24px;height:24px;color:var(--teal);flex-shrink:0}
+.edu b{font-size:1.02rem;display:block;color:var(--ink)}
+.edu span{color:var(--muted);font-size:13.5px;font-family:var(--mono)}
+
+/* ============ WORKFLOW SHOWCASE ============ */
+.flow-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.demo{
+  border:1px solid var(--line);border-radius:var(--r-lg);background:linear-gradient(180deg,#FFFFFF,#EFF1F4);
+  overflow:hidden;transition:transform .35s var(--ease),border-color .3s;
+}
+.demo:hover{transform:translateY(-4px);border-color:var(--line-2)}
+.demo-bar{display:flex;align-items:center;gap:9px;padding:14px 18px;border-bottom:1px solid var(--line);background:rgba(24,32,45,.03)}
+.trf{display:flex;gap:6px}.trf i{width:10px;height:10px;border-radius:50%;background:#26344c;display:block}
+.trf i:nth-child(1){background:#2c3a52}.trf i:nth-child(2){background:#26344c}
+.demo-bar .tt{font-family:var(--mono);font-size:11.5px;color:var(--muted);margin-left:4px;letter-spacing:.03em}
+.demo-bar .live{margin-left:auto;font-family:var(--mono);font-size:10px;color:var(--teal);display:flex;align-items:center;gap:6px}
+.demo-bar .live .dot{width:6px;height:6px;border-radius:50%;background:var(--teal);animation:pulse 2.4s infinite}
+.demo-body{padding:18px}
+.demo-cap{padding:0 18px 18px}
+.demo-cap b{font-size:1.06rem;font-family:var(--disp);font-weight:600;letter-spacing:-.01em}
+.demo-cap p{color:var(--muted);font-size:13.5px;margin-top:5px}
+
+/* calendar mock */
+.mk-cal{display:grid;grid-template-columns:36px repeat(4,1fr);gap:4px}
+.mk-cal .hh{font-family:var(--mono);font-size:9px;color:var(--faint);padding-top:4px}
+.mk-cal .dcol{display:flex;flex-direction:column;gap:4px}
+.mk-cal .dh{font-family:var(--mono);font-size:9.5px;color:var(--muted);text-align:center;padding-bottom:2px;letter-spacing:.04em}
+.mk-cal .ev{border-radius:6px;padding:7px 8px;font-size:10.5px;line-height:1.25;border-left:2px solid;min-height:34px}
+.mk-cal .slot{min-height:34px;border-radius:6px;background:rgba(24,32,45,.035)}
+.ev.t{background:rgba(79,227,208,.12);border-color:var(--teal);color:#0B6B60}
+.ev.i{background:rgba(124,147,255,.12);border-color:var(--indigo);color:#2E3C9E}
+.ev.a{background:rgba(246,184,96,.12);border-color:var(--amber);color:#8A5A08}
+.ev b{font-weight:600;color:#1B2532;display:block;font-size:10px}
+.ev span{opacity:.75;font-size:9px}
+
+/* inbox mock */
+.mk-inbox{display:flex;flex-direction:column;gap:6px}
+.mk-row{display:flex;align-items:center;gap:10px;padding:9px 10px;border-radius:9px;background:rgba(24,32,45,.04);border:1px solid transparent;transition:.2s}
+.mk-row:hover{border-color:var(--line-2);background:rgba(24,32,45,.06)}
+.mk-row .star{width:14px;height:14px;color:var(--faint);flex-shrink:0}
+.mk-row.p .star{color:var(--amber)}
+.mk-row .who{font-size:12px;color:var(--ink);width:74px;flex-shrink:0;font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.mk-row .subj{font-size:12px;color:var(--muted);flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tag{font-family:var(--mono);font-size:9px;padding:3px 7px;border-radius:5px;letter-spacing:.03em;flex-shrink:0}
+.tag.cl{background:rgba(79,227,208,.14);color:var(--teal)}
+.tag.ve{background:rgba(124,147,255,.14);color:var(--indigo)}
+.tag.fu{background:rgba(246,184,96,.14);color:var(--amber)}
+.tag.dn{background:rgba(148,161,184,.12);color:var(--muted)}
+.mk-row .tm{font-family:var(--mono);font-size:9.5px;color:var(--faint);width:38px;text-align:right;flex-shrink:0}
+
+/* board mock */
+.mk-board{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.col-h{font-family:var(--mono);font-size:9.5px;color:var(--muted);letter-spacing:.05em;text-transform:uppercase;display:flex;justify-content:space-between;margin-bottom:8px}
+.col-h em{color:var(--faint);font-style:normal}
+.card-t{background:rgba(24,32,45,.05);border:1px solid var(--line);border-radius:8px;padding:9px;margin-bottom:7px}
+.card-t .ct{font-size:10.5px;color:var(--ink);line-height:1.3;font-weight:500}
+.card-t .cd{font-family:var(--mono);font-size:8.5px;color:var(--faint);margin-top:6px;display:flex;align-items:center;gap:5px}
+.card-t .cd .pip{width:5px;height:5px;border-radius:50%}
+.pip.g{background:var(--teal)}.pip.y{background:var(--amber)}.pip.b{background:var(--indigo)}
+.col:nth-child(4) .card-t{opacity:.72}
+
+/* trip mock */
+.mk-trip .th{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
+.mk-trip .th b{font-size:13px;color:var(--ink);font-weight:600}
+.mk-trip .th .rt{font-family:var(--mono);font-size:10px;color:var(--teal)}
+.leg{display:flex;align-items:center;gap:10px;padding:9px 0;border-top:1px solid var(--line)}
+.leg .ic{width:26px;height:26px;border-radius:7px;background:var(--bg-2);border:1px solid var(--line-2);display:grid;place-items:center;color:var(--teal);flex-shrink:0}
+.leg .ic svg{width:14px;height:14px}
+.leg .lg{flex:1}
+.leg .lg b{font-size:11.5px;color:var(--ink);display:block;font-weight:500}
+.leg .lg span{font-family:var(--mono);font-size:9.5px;color:var(--faint)}
+.leg .rq{font-family:var(--mono);font-size:10px;color:var(--muted)}
+.leg .rq em{color:var(--teal);font-style:normal}
+
+/* automation pipeline (wide) */
+.demo.wide{grid-column:1/-1}
+.mk-flow{display:flex;align-items:stretch;gap:0;flex-wrap:wrap}
+.step{flex:1;min-width:150px;display:flex;align-items:center;gap:12px;padding:6px 4px}
+.step .si{width:42px;height:42px;border-radius:11px;display:grid;place-items:center;border:1px solid var(--line-2);background:var(--bg-2);color:var(--teal);flex-shrink:0}
+.step .si svg{width:19px;height:19px}
+.step .sx b{font-size:12.5px;color:var(--ink);display:block;font-weight:600}
+.step .sx span{font-family:var(--mono);font-size:9.5px;color:var(--faint);letter-spacing:.02em}
+.arw{display:grid;place-items:center;color:var(--line-2);padding:0 4px;flex-shrink:0}
+.arw svg{width:18px;height:18px}
+
+/* ============ TOOLS ============ */
+.tool-groups{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.tg{border:1px solid var(--line);border-radius:var(--r);padding:24px;background:var(--surface)}
+.tg h4{font-family:var(--mono);font-size:11.5px;color:var(--muted);letter-spacing:.08em;text-transform:uppercase;font-weight:500;margin-bottom:16px;display:flex;align-items:center;gap:10px}
+.tg h4 .b{color:var(--teal-dim)}
+.chips{display:flex;flex-wrap:wrap;gap:9px}
+.chip{display:inline-flex;align-items:center;gap:9px;border:1px solid var(--line-2);background:var(--bg-2);border-radius:10px;padding:9px 13px 9px 10px;font-size:13.5px;color:var(--ink);transition:.22s var(--ease)}
+.chip:hover{border-color:var(--teal-dim);transform:translateY(-2px);color:#fff}
+.chip .mg{width:22px;height:22px;border-radius:6px;display:grid;place-items:center;font-family:var(--disp);font-weight:700;font-size:11px;background:linear-gradient(135deg,var(--teal-deep),#0a2a29);color:var(--teal);flex-shrink:0}
+
+/* ============ CONTACT ============ */
+.contact{padding-bottom:clamp(60px,8vw,110px)}
+.contact-card{
+  position:relative;overflow:hidden;border:1px solid var(--line-2);border-radius:var(--r-lg);
+  padding:clamp(34px,5vw,64px);background:linear-gradient(160deg,#FFFFFF,#EDEFF3);
+}
+.contact-card::before{content:"";position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(620px 300px at 88% -10%,rgba(79,227,208,.14),transparent 60%),radial-gradient(520px 300px at 0% 120%,rgba(124,147,255,.12),transparent 60%)}
+.contact-grid{position:relative;display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(28px,4vw,54px);align-items:center}
+.contact h2{font-size:clamp(2rem,4.4vw,3.1rem);letter-spacing:-.03em;font-weight:600}
+.contact h2 .em{color:var(--teal)}
+.contact .lead{color:var(--muted);margin-top:16px;font-size:1.08rem;max-width:42ch}
+.contact .cta-row{margin-top:28px}
+.info{display:flex;flex-direction:column;gap:2px}
+.inf{display:flex;align-items:center;gap:15px;padding:16px 0;border-top:1px solid var(--line)}
+.inf:first-child{border-top:0}
+.inf .ic{width:42px;height:42px;border-radius:11px;display:grid;place-items:center;border:1px solid var(--line-2);background:var(--bg-2);color:var(--teal);flex-shrink:0}
+.inf .ic svg{width:19px;height:19px}
+.inf .k{font-family:var(--mono);font-size:10.5px;color:var(--faint);letter-spacing:.06em;text-transform:uppercase}
+.inf a,.inf .v{font-size:15px;color:var(--ink);word-break:break-word;transition:color .2s}
+.inf a:hover{color:var(--teal)}
+
+/* footer */
+footer{border-top:1px solid var(--line);padding:34px 0;position:relative;z-index:1}
+.foot{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:16px;max-width:var(--maxw);margin:0 auto;padding:0 var(--mx)}
+.foot .fb{display:flex;align-items:center;gap:10px;font-family:var(--disp);font-weight:600}
+.foot .fb .mono-badge{width:30px;height:30px;font-size:12px}
+.foot span{color:var(--faint);font-family:var(--mono);font-size:12px}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(22px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+.rv.in{opacity:1;transform:none}
+.hero .d1{animation:up .8s var(--ease) both}
+.hero .d2{animation:up .8s .1s var(--ease) both}
+.hero .d3{animation:up .8s .2s var(--ease) both}
+.hero .d4{animation:up .8s .3s var(--ease) both}
+.hero .d5{animation:up .9s .4s var(--ease) both}
+@keyframes up{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
+
+/* ============ WHAT I CAN OFFER ============ */
+.offer-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.offer{
+  border:1px solid var(--line);border-radius:var(--r);padding:24px;
+  background:linear-gradient(180deg,var(--surface),rgba(255,255,255,.35));
+  position:relative;overflow:hidden;transition:border-color .3s,transform .3s var(--ease),background .3s;
+}
+.offer::after{content:"";position:absolute;inset:0;border-radius:var(--r);pointer-events:none;
+  background:radial-gradient(300px 140px at 100% 0,rgba(79,227,208,.09),transparent 60%);opacity:0;transition:opacity .35s}
+.offer:hover{transform:translateY(-4px);border-color:var(--line-2)}
+.offer:hover::after{opacity:1}
+.offer .oi{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;border:1px solid var(--line-2);background:var(--bg-2);color:var(--teal);margin-bottom:16px}
+.offer .oi svg{width:21px;height:21px}
+.offer h3{font-size:1.12rem;font-weight:600;letter-spacing:-.02em}
+.offer p{color:var(--muted);font-size:14px;margin-top:9px;line-height:1.62}
+
+/* ============ RESPONSIVE ============ */
+@media (max-width:920px){
+  .hero-grid{grid-template-columns:1fr;gap:8px}
+  .hero-photo{order:-1;max-width:300px}
+  .hero-sub{max-width:none}
+  .about-grid{grid-template-columns:1fr}
+  .cap-grid,.flow-grid,.tool-groups{grid-template-columns:1fr}
+  .offer-grid{grid-template-columns:repeat(2,1fr)}
+  .contact-grid{grid-template-columns:1fr}
+  .strip-in{grid-template-columns:repeat(2,1fr)}
+  .stat:nth-child(2){border-right:0}
+  .stat{border-bottom:1px solid var(--line)}
+  .stat:nth-last-child(-n+2){border-bottom:0}
+}
+@media (max-width:680px){
+  .nav-links{
+    position:fixed;inset:66px 0 auto 0;flex-direction:column;align-items:flex-start;gap:2px;
+    background:rgba(244,245,248,.98);backdrop-filter:blur(16px);padding:16px var(--mx) 26px;
+    border-bottom:1px solid var(--line);transform:translateY(-140%);transition:transform .38s var(--ease);
+  }
+  .nav-links.open{transform:none}
+  .nav-links a{padding:13px 0;font-size:16px;width:100%;border-bottom:1px solid var(--line)}
+  .nav-links a::after{display:none}
+  .nav-links .nav-cta{margin-top:12px;width:100%;text-align:center;border-bottom:0;color:#fff}
+  .burger{display:flex}
+  .mk-cal{grid-template-columns:28px repeat(3,1fr)}
+  .mk-cal .d4c{display:none}
+  .mk-board{grid-template-columns:repeat(2,1fr)}
+  .offer-grid{grid-template-columns:1fr}
+  .mk-board .col:nth-child(n+3){display:none}
+  .tz-card{flex:1;min-width:calc(50% - 5px)}
+  .demo-body{padding:14px}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  .rv{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<header class="nav">
+  <div class="nav-in">
+    <a href="#top" class="brand" aria-label="John Christian De Leon — home">
+      <span class="mono-badge">JC</span>
+      <span><b>John Christian De Leon</b><span>EXECUTIVE ASSISTANT</span></span>
+    </a>
+    <nav class="nav-links" id="menu">
+      <a href="#about">About</a>
+      <a href="#offer">Services</a>
+      <a href="#capabilities">Capabilities</a>
+      <a href="#experience">Experience</a>
+      <a href="#work">How I work</a>
+      <a href="#tools">Toolkit</a>
+      <a href="#contact" class="nav-cta">Let's talk</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <span class="eyebrow d1"><span class="pulse"></span> AVAILABLE FOR REMOTE ROLES — MANILA, PH</span>
+      <h1 class="d2">You lead the vision.<br><span class="em">I keep everything running.</span></h1>
+      <p class="hero-sub d3">I'm John Christian — an <b>executive assistant</b> with 4+ years running calendars, inboxes, travel, and daily operations for founders and CEOs at US and Australian companies.</p>
+      <p class="role-line d3">Executive Support <i>·</i> Operations <i>·</i> Calendar &amp; Inbox <i>·</i> Travel <i>·</i> SOPs</p>
+      <div class="cta-row d4">
+        <a href="#work" class="btn btn-primary">See how I work
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <a href="assets/John_Christian_De_Leon_Resume.pdf" download class="btn btn-ghost">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0l-4-4m4 4l4-4M4 17v2a2 2 0 002 2h12a2 2 0 002-2v-2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Download résumé</a>
+      </div>
+      <div class="tz d5">
+        <div class="tz-card"><div class="tz-loc"><span class="dot"></span> Manila · PH</div><div class="tz-time" id="tz-ph">—</div></div>
+        <div class="tz-card"><div class="tz-loc"><span class="dot"></span> US · Eastern</div><div class="tz-time" id="tz-us">—</div></div>
+        <div class="tz-card"><div class="tz-loc"><span class="dot"></span> AU · Sydney</div><div class="tz-time" id="tz-au">—</div></div>
+      </div>
+    </div>
+
+    <div class="hero-photo d3">
+      <div class="photo-stage">
+        <div class="scan"></div>
+        <img src="data:image/jpeg;base64,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" alt="Portrait of John Christian De Leon" width="332" height="414" fetchpriority="high" />
+        <span class="op-chip top"><span class="pulse"></span> ON DUTY</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATUS STRIP -->
+<div class="strip">
+  <div class="strip-in">
+    <div class="stat"><div class="n">4<em>+</em></div><div class="l">Years · exec support</div></div>
+    <div class="stat"><div class="n">6</div><div class="l">Founders &amp; teams served</div></div>
+    <div class="stat"><div class="n">11</div><div class="l">Platforms mastered</div></div>
+    <div class="stat"><div class="n">3</div><div class="l">Regions · US · AU · PH</div></div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="wrap about-grid">
+    <div class="about-body rv">
+      <div class="sec-head" style="margin-bottom:26px">
+        <div class="sec-tag">About</div>
+        <h2 class="sec-title">The right hand founders hand the details to.</h2>
+      </div>
+      <p>I'm the person founders trust with their calendar, inbox, and daily operations — so nothing slips and they get their time back. For the past four years I've supported founders and CEOs at US and Australian companies remotely: keeping meetings on track, inboxes under control, travel booked, and the small operational fires handled before they spread.</p>
+      <p>I'm <b>trusted with confidential information</b>, comfortable working across time zones, and used to supporting more than one leader at once. My background spans executive support, e-commerce operations, and client operations — so I read a business quickly and start removing friction from day one.</p>
+    </div>
+    <aside class="about-side rv">
+      <h4>What I'm known for</h4>
+      <div class="trait"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg><div><b>Nothing slips</b><span>Follow-through on every action item, before deadlines.</span></div></div>
+      <div class="trait"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke-linecap="round" stroke-linejoin="round"/></svg><div><b>Fully confidential</b><span>Discreet with donor, client, and leadership data.</span></div></div>
+      <div class="trait"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2" stroke-linecap="round" stroke-linejoin="round"/></svg><div><b>Time-zone ready</b><span>Coverage across US, Australia, and PH hours.</span></div></div>
+      <div class="trait"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h10M4 17h13" stroke-linecap="round"/></svg><div><b>Systems, not chaos</b><span>SOPs and workflows that outlast any single task.</span></div></div>
+    </aside>
+  </div>
+</section>
+
+<!-- WHAT I CAN OFFER -->
+<section id="offer">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="sec-tag">What I can offer</div>
+      <h2 class="sec-title">Here's how I can help you.</h2>
+      <p class="sec-desc">Concrete ways I take work off your plate — so your day runs smoothly and you get your time back for the work only you can do.</p>
+    </div>
+    <div class="offer-grid">
+      <div class="offer rv">
+        <div class="oi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18M8 2v4M16 2v4" stroke-linecap="round"/></svg></div>
+        <h3>Calendar &amp; scheduling</h3>
+        <p>I own your calendar — meetings booked, buffers set, and double-bookings caught before they ever happen.</p>
+      </div>
+      <div class="offer rv">
+        <div class="oi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <h3>Inbox management</h3>
+        <p>Your inbox triaged, sorted, and answered daily, so the messages that matter never get buried.</p>
+      </div>
+      <div class="offer rv">
+        <div class="oi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M12 22s7-6.5 7-12a7 7 0 10-14 0c0 5.5 7 12 7 12z" stroke-linejoin="round"/><circle cx="12" cy="10" r="2.5"/></svg></div>
+        <h3>Travel planning</h3>
+        <p>Flights, hotels, and detailed day-by-day itineraries booked end to end — ready before you pack.</p>
+      </div>
+      <div class="offer rv">
+        <div class="oi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M4 7h16M4 12h10M4 17h13" stroke-linecap="round"/></svg></div>
+        <h3>Meeting support</h3>
+        <p>Agendas prepared, notes captured, and every action item followed up until it's actually done.</p>
+      </div>
+      <div class="offer rv">
+        <div class="oi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><rect x="3" y="3" width="8" height="8" rx="1.5"/><rect x="13" y="3" width="8" height="8" rx="1.5"/><rect x="3" y="13" width="8" height="8" rx="1.5"/><rect x="13" y="13" width="8" height="8" rx="1.5"/></svg></div>
+        <h3>Data &amp; admin</h3>
+        <p>Reports, records, and data entry kept accurate, organized, and always up to date.</p>
+      </div>
+      <div class="offer rv">
+        <div class="oi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M21 11.5a8.4 8.4 0 01-11.7 7.7L3 21l1.8-6.3A8.4 8.4 0 1121 11.5z" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <h3>Customer &amp; email support</h3>
+        <p>Prompt, professional replies that keep your clients, partners, and vendors well looked after.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CAPABILITIES -->
+<section id="capabilities">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="sec-tag">Capabilities</div>
+      <h2 class="sec-title">Everything a busy leader needs handled.</h2>
+      <p class="sec-desc">Four areas I take off a founder's plate — so their day runs on rails and their focus stays on the work only they can do.</p>
+    </div>
+    <div class="cap-grid">
+      <div class="cap rv">
+        <span class="cap-num">01</span>
+        <div class="cap-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18M8 2v4M16 2v4" stroke-linecap="round"/></svg></div>
+        <h3>Executive support</h3>
+        <ul>
+          <li>Calendar &amp; inbox management</li>
+          <li>Travel coordination &amp; itineraries</li>
+          <li>Meeting prep, agendas &amp; minutes</li>
+          <li>Confidential correspondence</li>
+          <li>Support for more than one executive</li>
+        </ul>
+      </div>
+      <div class="cap rv">
+        <span class="cap-num">02</span>
+        <div class="cap-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M12 3v3m0 12v3M3 12h3m12 0h3M5.6 5.6l2.1 2.1m8.6 8.6l2.1 2.1m0-12.8l-2.1 2.1M7.7 16.3l-2.1 2.1" stroke-linecap="round"/><circle cx="12" cy="12" r="3.2"/></svg></div>
+        <h3>Operations &amp; systems</h3>
+        <ul>
+          <li>Process documentation &amp; SOPs</li>
+          <li>Task prioritization &amp; tracking</li>
+          <li>Cross-functional coordination</li>
+          <li>Remote team support</li>
+          <li>Data &amp; records accuracy</li>
+        </ul>
+      </div>
+      <div class="cap rv">
+        <span class="cap-num">03</span>
+        <div class="cap-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M21 11.5a8.4 8.4 0 01-11.7 7.7L3 21l1.8-6.3A8.4 8.4 0 1121 11.5z" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <h3>Communication</h3>
+        <ul>
+          <li>Executive &amp; stakeholder comms</li>
+          <li>Client relations &amp; front-of-house</li>
+          <li>Follow-up &amp; progress reporting</li>
+          <li>Point of contact for clients &amp; vendors</li>
+          <li>Clear, on-time status updates</li>
+        </ul>
+      </div>
+      <div class="cap rv">
+        <span class="cap-num">04</span>
+        <div class="cap-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><rect x="3" y="3" width="8" height="8" rx="1.5"/><rect x="13" y="3" width="8" height="8" rx="1.5"/><rect x="3" y="13" width="8" height="8" rx="1.5"/><rect x="13" y="13" width="8" height="8" rx="1.5"/></svg></div>
+        <h3>Tools &amp; platforms</h3>
+        <ul>
+          <li>Google Workspace &amp; Microsoft Office</li>
+          <li>Asana · Trello · Notion</li>
+          <li>Slack · Zoom · Calendly</li>
+          <li>Salesforce · HubSpot CRM</li>
+          <li>Shopify e-commerce operations</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="sec-tag">Experience</div>
+      <h2 class="sec-title">Four years supporting founders remotely.</h2>
+      <p class="sec-desc">Executive support, operations, and e-commerce roles for US, Australian, and global teams.</p>
+    </div>
+    <div class="tl">
+      <div class="job rv">
+        <span class="node"></span>
+        <div class="job-top"><h3>Executive Assistant to Founder &amp; CEO</h3></div>
+        <div class="org">Solar Energy Company (US) · Remote</div>
+        <ul>
+          <li>Manage the CEO's calendar, inbox, and travel across US and PH time zones, keeping meetings and deadlines on track.</li>
+          <li>Prepare agendas, take meeting notes, and follow up on action items so nothing gets missed.</li>
+          <li>Handle confidential documents and act as the main point of contact between the CEO, clients, and vendors.</li>
+        </ul>
+      </div>
+      <div class="job rv">
+        <span class="node"></span>
+        <div class="job-top"><h3>Executive Assistant</h3></div>
+        <div class="org">Academic Program / Education Company (Owner-led) · Remote</div>
+        <ul>
+          <li>Support the owner with scheduling, email, and daily admin across academic and operations teams.</li>
+          <li>Keep enrollment and student records accurate and up to date, in line with the program's requirements.</li>
+          <li>Coordinate tasks between teams and send clear progress updates so the owner always knows where things stand.</li>
+        </ul>
+      </div>
+      <div class="job rv">
+        <span class="node"></span>
+        <div class="job-top"><h3>General Virtual Assistant</h3><span class="period">Contract</span></div>
+        <div class="org">Client (Australia) · Remote</div>
+        <ul>
+          <li>Handled scheduling, client outreach, and follow-ups, keeping response times quick and consistent.</li>
+          <li>Kept organized logs of emails, meetings, and schedules for easy reference and reporting.</li>
+          <li>Flagged recurring issues early and routed the right ones to the right people.</li>
+        </ul>
+      </div>
+      <div class="job rv">
+        <span class="node"></span>
+        <div class="job-top"><h3>E-Commerce Manager <span style="color:var(--faint);font-weight:400;font-size:.8em">(Part-Time)</span></h3><span class="period">Jun 2025 – Jun 2026</span></div>
+        <div class="org">Heritage and Heart LLC · Remote</div>
+        <ul>
+          <li>Ran daily Shopify operations, from orders to customer questions, to meet monthly sales targets.</li>
+          <li>Managed Facebook ad budgets and adjusted campaigns based on what the numbers showed.</li>
+          <li>Worked with the sales team to track leads and lift response rates.</li>
+        </ul>
+      </div>
+      <div class="job rv">
+        <span class="node"></span>
+        <div class="job-top"><h3>Client Operations Associate</h3><span class="period">Sep 2024 – Sep 2025</span></div>
+        <div class="org">Concentrix · Remote</div>
+        <ul>
+          <li>Coordinated account and verification requests, keeping resolution times low through clear priorities.</li>
+          <li>Kept detailed records and followed company protocols to maintain quality and compliance.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="edu rv">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M22 10L12 5 2 10l10 5 10-5z" stroke-linejoin="round"/><path d="M6 12v5c0 1 2.7 2.5 6 2.5s6-1.5 6-2.5v-5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <div><b>Bachelor of Secondary Education — Major in Mathematics</b><span>Colegio de Calumpit · 2019 – 2022</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- WORK / HOW I WORK -->
+<section id="work">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="sec-tag">How I work</div>
+      <h2 class="sec-title">Inside the workflow.</h2>
+      <p class="sec-desc">Representative views of the systems I set up and run day to day — the calendars, inboxes, boards, and processes that keep a founder's operation moving. Sample layouts shown for illustration.</p>
+    </div>
+    <div class="flow-grid">
+
+      <!-- Calendar -->
+      <div class="demo rv">
+        <div class="demo-bar"><div class="trf"><i></i><i></i><i></i></div><span class="tt">calendar · week view</span><span class="live"><span class="dot"></span>synced</span></div>
+        <div class="demo-body">
+          <div class="mk-cal">
+            <div class="hh"></div>
+            <div class="dcol"><div class="dh">MON</div></div>
+            <div class="dcol"><div class="dh">TUE</div></div>
+            <div class="dcol"><div class="dh">WED</div></div>
+            <div class="dcol d4c"><div class="dh">THU</div></div>
+            <div class="hh">9<br>AM</div>
+            <div class="dcol"><div class="ev t"><b>Team standup</b><span>9:00–9:30</span></div></div>
+            <div class="dcol"><div class="slot"></div></div>
+            <div class="dcol"><div class="ev i"><b>1:1 · CEO</b><span>9:30–10:00</span></div></div>
+            <div class="dcol d4c"><div class="slot"></div></div>
+            <div class="hh">11<br>AM</div>
+            <div class="dcol"><div class="slot"></div></div>
+            <div class="dcol"><div class="ev i"><b>Investor call</b><span>11:00–11:45</span></div></div>
+            <div class="dcol"><div class="slot"></div></div>
+            <div class="dcol d4c"><div class="ev a"><b>Travel block</b><span>Hold</span></div></div>
+            <div class="hh">2<br>PM</div>
+            <div class="dcol"><div class="ev a"><b>Vendor sync</b><span>2:00–2:30</span></div></div>
+            <div class="dcol"><div class="slot"></div></div>
+            <div class="dcol"><div class="ev t"><b>Report review</b><span>2:30–3:15</span></div></div>
+            <div class="dcol d4c"><div class="slot"></div></div>
+          </div>
+        </div>
+        <div class="demo-cap"><b>Calendar control</b><p>Conflicts resolved, priorities protected, and buffer built in before the CEO ever opens the day.</p></div>
+      </div>
+
+      <!-- Inbox -->
+      <div class="demo rv">
+        <div class="demo-bar"><div class="trf"><i></i><i></i><i></i></div><span class="tt">inbox · triaged</span><span class="live"><span class="dot"></span>zero backlog</span></div>
+        <div class="demo-body">
+          <div class="mk-inbox">
+            <div class="mk-row p"><svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.5 7 .6-5.3 4.6 1.6 6.9L12 17.6 5.7 20.6l1.6-6.9L2 9.1l7-.6z"/></svg><span class="who">Sarah — Client</span><span class="subj">Re: proposal — needs sign-off today</span><span class="tag cl">CLIENT</span><span class="tm">9:12</span></div>
+            <div class="mk-row"><svg class="star" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3 6.5 7 .6-5.3 4.6 1.6 6.9L12 17.6 5.7 20.6l1.6-6.9L2 9.1l7-.6z" stroke-linejoin="round"/></svg><span class="who">Vendor Co.</span><span class="subj">Invoice #2214 — scheduled for review</span><span class="tag ve">VENDOR</span><span class="tm">8:47</span></div>
+            <div class="mk-row"><svg class="star" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3 6.5 7 .6-5.3 4.6 1.6 6.9L12 17.6 5.7 20.6l1.6-6.9L2 9.1l7-.6z" stroke-linejoin="round"/></svg><span class="who">David</span><span class="subj">Follow-up: partnership call notes sent</span><span class="tag fu">FOLLOW-UP</span><span class="tm">8:30</span></div>
+            <div class="mk-row"><svg class="star" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3 6.5 7 .6-5.3 4.6 1.6 6.9L12 17.6 5.7 20.6l1.6-6.9L2 9.1l7-.6z" stroke-linejoin="round"/></svg><span class="who">Team</span><span class="subj">Weekly report — filed &amp; archived</span><span class="tag dn">DONE</span><span class="tm">Yest</span></div>
+            <div class="mk-row"><svg class="star" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3 6.5 7 .6-5.3 4.6 1.6 6.9L12 17.6 5.7 20.6l1.6-6.9L2 9.1l7-.6z" stroke-linejoin="round"/></svg><span class="who">Grace</span><span class="subj">New contact added to CRM</span><span class="tag dn">DONE</span><span class="tm">Yest</span></div>
+          </div>
+        </div>
+        <div class="demo-cap"><b>Inbox, triaged</b><p>Labeled, prioritized, and templated — so the important threads surface and follow-ups never fall through.</p></div>
+      </div>
+
+      <!-- Board -->
+      <div class="demo rv">
+        <div class="demo-bar"><div class="trf"><i></i><i></i><i></i></div><span class="tt">project board · this week</span><span class="live"><span class="dot"></span>on track</span></div>
+        <div class="demo-body">
+          <div class="mk-board">
+            <div class="col"><div class="col-h">To do <em>3</em></div>
+              <div class="card-t"><div class="ct">Draft board deck</div><div class="cd"><span class="pip y"></span>Due Wed</div></div>
+              <div class="card-t"><div class="ct">Collect vendor quotes</div><div class="cd"><span class="pip b"></span>Due Thu</div></div>
+            </div>
+            <div class="col"><div class="col-h">In progress <em>2</em></div>
+              <div class="card-t"><div class="ct">Onboard new hire</div><div class="cd"><span class="pip g"></span>Today</div></div>
+              <div class="card-t"><div class="ct">Update CRM records</div><div class="cd"><span class="pip g"></span>Today</div></div>
+            </div>
+            <div class="col"><div class="col-h">Review <em>2</em></div>
+              <div class="card-t"><div class="ct">Monthly report</div><div class="cd"><span class="pip y"></span>Fri</div></div>
+              <div class="card-t"><div class="ct">Budget summary</div><div class="cd"><span class="pip b"></span>Fri</div></div>
+            </div>
+            <div class="col"><div class="col-h">Done <em>4</em></div>
+              <div class="card-t"><div class="ct">Travel booked</div><div class="cd"><span class="pip g"></span>✓ Mon</div></div>
+              <div class="card-t"><div class="ct">Agenda circulated</div><div class="cd"><span class="pip g"></span>✓ Mon</div></div>
+            </div>
+          </div>
+        </div>
+        <div class="demo-cap"><b>Everything on track</b><p>Tasks organized by priority and owner, with progress visible to every stakeholder at a glance.</p></div>
+      </div>
+
+      <!-- Trip -->
+      <div class="demo rv">
+        <div class="demo-bar"><div class="trf"><i></i><i></i><i></i></div><span class="tt">travel · itinerary</span><span class="live"><span class="dot"></span>confirmed</span></div>
+        <div class="demo-body">
+          <div class="mk-trip">
+            <div class="th"><b>Regional workshop</b><span class="rt">3 nights · booked</span></div>
+            <div class="leg"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M2 16l20-6-6 12-3-5-5-1-6 0z" stroke-linejoin="round"/></svg></span><div class="lg"><b>Outbound flight · 08:00</b><span>Confirmation on file</span></div><span class="rq"><em>PNR ✓</em></span></div>
+            <div class="leg"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M3 21V8l9-5 9 5v13M9 21v-6h6v6" stroke-linejoin="round"/></svg></span><div class="lg"><b>Hotel · 3 nights</b><span>Check-in 12 Jun · Check-out 15 Jun</span></div><span class="rq"><em>✓</em></span></div>
+            <div class="leg"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 10h18M7 3v4" stroke-linecap="round"/></svg></span><div class="lg"><b>Daily schedule + transfers</b><span>Airport pickup arranged</span></div><span class="rq"><em>✓</em></span></div>
+            <div class="leg"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7H14a3.5 3.5 0 010 7H6" stroke-linecap="round"/></svg></span><div class="lg"><b>Budget summary</b><span>Flights · hotel · per diem itemized</span></div><span class="rq">USD</span></div>
+          </div>
+        </div>
+        <div class="demo-cap"><b>Trips, sorted</b><p>Flights, hotels, transfers, and a costed budget — one clean itinerary, zero last-minute surprises.</p></div>
+      </div>
+
+      <!-- Automation pipeline (wide) -->
+      <div class="demo wide rv">
+        <div class="demo-bar"><div class="trf"><i></i><i></i><i></i></div><span class="tt">recurring workflow · SOP</span><span class="live"><span class="dot"></span>automated</span></div>
+        <div class="demo-body">
+          <div class="mk-flow">
+            <div class="step"><span class="si"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M4 4h16v4H4zM4 12h16v8H4z" stroke-linejoin="round"/></svg></span><div class="sx"><b>Collect</b><span>Data pulled to sheet</span></div></div>
+            <div class="arw"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12h16M14 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <div class="step"><span class="si"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M12 3l2.2 5.8L20 11l-5.8 2.2L12 19l-2.2-5.8L4 11l5.8-2.2z" stroke-linejoin="round"/></svg></span><div class="sx"><b>Draft</b><span>Template + AI assist</span></div></div>
+            <div class="arw"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12h16M14 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <div class="step"><span class="si"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div class="sx"><b>Review</b><span>Checked for accuracy</span></div></div>
+            <div class="arw"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12h16M14 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <div class="step"><span class="si"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M4 4l16 8-16 8 4-8-4-8z" stroke-linejoin="round"/></svg></span><div class="sx"><b>Send</b><span>Delivered + logged</span></div></div>
+          </div>
+        </div>
+        <div class="demo-cap"><b>Repeatable systems</b><p>Recurring reporting and admin turned into a documented SOP — faster every week, and easy for anyone to run.</p></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- TOOLS -->
+<section id="tools">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="sec-tag">Toolkit</div>
+      <h2 class="sec-title">Fluent in the stack founders already use.</h2>
+      <p class="sec-desc">Every tool here is one I've worked in through real projects — including the AI tools I use to move faster. No ramp-up time needed.</p>
+    </div>
+    <div class="tool-groups">
+      <div class="tg rv">
+        <h4><span class="b">›</span> Productivity &amp; scheduling</h4>
+        <div class="chips">
+          <span class="chip"><span class="mg">G</span>Google Workspace</span>
+          <span class="chip"><span class="mg">M</span>Microsoft 365</span>
+          <span class="chip"><span class="mg">O</span>Outlook</span>
+          <span class="chip"><span class="mg">C</span>Calendly</span>
+          <span class="chip"><span class="mg">Z</span>Zoom</span>
+          <span class="chip"><span class="mg">M</span>Google Meet</span>
+          <span class="chip"><span class="mg">T</span>Microsoft Teams</span>
+        </div>
+      </div>
+      <div class="tg rv">
+        <h4><span class="b">›</span> Projects &amp; knowledge</h4>
+        <div class="chips">
+          <span class="chip"><span class="mg">A</span>Asana</span>
+          <span class="chip"><span class="mg">T</span>Trello</span>
+          <span class="chip"><span class="mg">N</span>Notion</span>
+          <span class="chip"><span class="mg">S</span>Slack</span>
+          <span class="chip"><span class="mg">C</span>ClickUp</span>
+          <span class="chip"><span class="mg">M</span>Monday.com</span>
+          <span class="chip"><span class="mg">A</span>Airtable</span>
+        </div>
+      </div>
+      <div class="tg rv">
+        <h4><span class="b">›</span> AI &amp; automation</h4>
+        <div class="chips">
+          <span class="chip"><span class="mg">C</span>ChatGPT</span>
+          <span class="chip"><span class="mg">C</span>Claude</span>
+          <span class="chip"><span class="mg">G</span>Gemini</span>
+          <span class="chip"><span class="mg">C</span>Copilot</span>
+          <span class="chip"><span class="mg">Z</span>Zapier</span>
+          <span class="chip"><span class="mg">M</span>Make</span>
+          <span class="chip"><span class="mg">N</span>Notion AI</span>
+        </div>
+      </div>
+      <div class="tg rv">
+        <h4><span class="b">›</span> CRM &amp; operations</h4>
+        <div class="chips">
+          <span class="chip"><span class="mg">S</span>Salesforce</span>
+          <span class="chip"><span class="mg">H</span>HubSpot</span>
+          <span class="chip"><span class="mg">Z</span>Zoho CRM</span>
+          <span class="chip"><span class="mg">Z</span>Zendesk</span>
+          <span class="chip"><span class="mg">P</span>Pipedrive</span>
+        </div>
+      </div>
+      <div class="tg rv">
+        <h4><span class="b">›</span> E-commerce</h4>
+        <div class="chips">
+          <span class="chip"><span class="mg">S</span>Shopify</span>
+          <span class="chip"><span class="mg">W</span>WooCommerce</span>
+          <span class="chip"><span class="mg">A</span>Amazon</span>
+          <span class="chip"><span class="mg">F</span>Facebook Ads</span>
+        </div>
+      </div>
+      <div class="tg rv">
+        <h4><span class="b">›</span> Files &amp; documents</h4>
+        <div class="chips">
+          <span class="chip"><span class="mg">D</span>Google Drive</span>
+          <span class="chip"><span class="mg">D</span>Dropbox</span>
+          <span class="chip"><span class="mg">O</span>OneDrive</span>
+          <span class="chip"><span class="mg">D</span>DocuSign</span>
+          <span class="chip"><span class="mg">C</span>Canva</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact">
+  <div class="wrap">
+    <div class="contact-card rv">
+      <div class="contact-grid">
+        <div>
+          <h2>Let's take the busywork <span class="em">off your plate.</span></h2>
+          <p class="lead">If you're a founder or leader who needs a reliable right hand across the US, Australia, or PH hours — I'd love to talk. I reply within 12 hours.</p>
+          <div class="cta-row">
+            <a href="mailto:johnchristiandeleon6235@gmail.com?subject=Executive%20Assistant%20role" class="btn btn-primary">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Email me</a>
+            <a href="assets/John_Christian_De_Leon_Resume.pdf" download class="btn btn-ghost">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0l-4-4m4 4l4-4M4 17v2a2 2 0 002 2h12a2 2 0 002-2v-2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Résumé</a>
+          </div>
+        </div>
+        <div class="info">
+          <div class="inf"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><div class="k">Email</div><a href="mailto:johnchristiandeleon6235@gmail.com">johnchristiandeleon6235@gmail.com</a></div></div>
+          <div class="inf"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 5c0 9 6 15 15 15l0-4-4-2-2 2c-3-1.5-5-3.5-6-6l2-2-2-4z" stroke-linejoin="round"/></svg></span><div><div class="k">Phone</div><a href="tel:+639952970872">+63 995 297 0872</a></div></div>
+          <div class="inf"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s7-6.5 7-12a7 7 0 10-14 0c0 5.5 7 12 7 12z" stroke-linejoin="round"/><circle cx="12" cy="10" r="2.5"/></svg></span><div><div class="k">Based in</div><span class="v">Manila, Philippines · Remote worldwide</span></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="foot">
+    <div class="fb"><span class="mono-badge">JC</span> John Christian De Leon</div>
+    <span>Executive Assistant · Built <span id="yr"></span></span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+  // mobile menu
+  var burger=document.getElementById('burger'), menu=document.getElementById('menu');
+  burger.addEventListener('click',function(){
+    var open=menu.classList.toggle('open'); burger.classList.toggle('x');
+    burger.setAttribute('aria-expanded',open);
+  });
+  menu.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){menu.classList.remove('open');burger.classList.remove('x');burger.setAttribute('aria-expanded',false);});});
+
+  // live clocks (cross–time-zone coverage)
+  function clock(id,tz){
+    var el=document.getElementById(id); if(!el)return;
+    try{ el.textContent=new Intl.DateTimeFormat('en-US',{hour:'2-digit',minute:'2-digit',hour12:true,timeZone:tz}).format(new Date()); }
+    catch(e){ el.textContent='—'; }
+  }
+  function ticks(){clock('tz-ph','Asia/Manila');clock('tz-us','America/New_York');clock('tz-au','Australia/Sydney');}
+  ticks(); setInterval(ticks,30000);
+
+  // scroll reveal
+  var rmq=window.matchMedia('(prefers-reduced-motion: reduce)');
+  if(!rmq.matches && 'IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){
+      es.forEach(function(e){ if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);} });
+    },{threshold:.12,rootMargin:'0px 0px -8% 0px'});
+    document.querySelectorAll('.rv').forEach(function(el){io.observe(el);});
+  } else { document.querySelectorAll('.rv').forEach(function(el){el.classList.add('in');}); }
+
+  // active nav link on scroll
+  var secs=[].slice.call(document.querySelectorAll('main section[id]'));
+  var links={}; document.querySelectorAll('.nav-links a[href^="#"]').forEach(function(a){links[a.getAttribute('href').slice(1)]=a;});
+  if('IntersectionObserver' in window){
+    var so=new IntersectionObserver(function(es){
+      es.forEach(function(e){
+        if(e.isIntersecting){var id=e.target.id;Object.values(links).forEach(function(l){l.classList.remove('on');});if(links[id])links[id].classList.add('on');}
+      });
+    },{threshold:.5,rootMargin:'-30% 0px -55% 0px'});
+    secs.forEach(function(s){so.observe(s);});
+  }
+
+  document.getElementById('yr').textContent=new Date().getFullYear();
+})();
+</script>
+</body>
+</html>
